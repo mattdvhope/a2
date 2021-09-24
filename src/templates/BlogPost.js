@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import "./BlogPost.css";
+import "./BlogPost.css";
 // import SetInitialVideosAbove from "../components/SetInitialVideosAbove";
 // import SetInitialVideosBelow from "../components/SetInitialVideosBelow";
 // import SetMoreVideosAbove from "../components/SetMoreVideosAbove";
 // import SetMoreVideosBelow from "../components/SetMoreVideosBelow";
 // import UnderLastVideo from "../components/UnderLastVideo"
-// import YoutubeHolder from "./YoutubeHolder"
+import YoutubeHolder from "./YoutubeHolder"
 // import SetFirstVideoPosition from "../utils/SetFirstVideoPosition";
 // import RetainPosOrJumpToTop from "../utils/RetainPosOrJumpToTop";
 // import useInfiniteScroll from "../utils/useInfiniteScroll"; // custom Hook
@@ -69,8 +69,7 @@ const BlogPost = ({ data }) => {
         {/*{initialVideosAbove}*/}
         {/*<div className="site-container blog-post" ref={firstVideoRef}>*/}
         <div className="site-container blog-post" >
-          <h1>In BlogPost!!!!!!</h1>
-          {/*<YoutubeHolder data={data.contentfulBlogs}/>*/}
+          <YoutubeHolder data={data.contentfulBlogs}/>
           {/*{numberOfVideosBelow === 0 ? UnderLastVideo() : null}*/}
         </div>
         {/*{initialVideosBelow}*/}
