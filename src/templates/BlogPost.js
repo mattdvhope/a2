@@ -9,7 +9,7 @@ import "./BlogPost.css";
 // import SetMoreVideosBelow from "../components/SetMoreVideosBelow";
 // import UnderLastVideo from "../components/UnderLastVideo"
 import YoutubeHolder from "./YoutubeHolder"
-// import SetFirstVideoPosition from "../utils/SetFirstVideoPosition";
+import SetFirstVideoPosition from "../utils/SetFirstVideoPosition";
 // import RetainPosOrJumpToTop from "../utils/RetainPosOrJumpToTop";
 // import useInfiniteScroll from "../utils/useInfiniteScroll"; // custom Hook
 // import { ScrollToSmoothly } from "../utils/ScrollToSmoothly";
@@ -22,9 +22,9 @@ const BlogPost = ({ data }) => {
   //   RemoveCookies()
   // }, []); // useEffect
 
-  // // 1. Set position of first video, which is arrived at via the URL suffix & auto-scrolled to from the top of 'initialVideosAbove'
-  // const firstVideoRef = useRef(null);
-  // SetFirstVideoPosition(firstVideoRef, data.contentfulBlogs.slug);
+  // 1. Set position of first video, which is arrived at via the URL suffix & auto-scrolled to from the top of 'initialVideosAbove'
+  const firstVideoRef = useRef(null);
+  SetFirstVideoPosition(firstVideoRef, data.contentfulBlogs.slug);
 
   // // 2. Set 'initial' videos above and below the first video
   // const [initialVideosAbove, setInitialVideosAbove, initVidAbvRef] = SetInitialVideosAbove(data);
@@ -67,8 +67,7 @@ const BlogPost = ({ data }) => {
       <div className="container graphics">
         {/*{moreVidsAbv}*/}
         {/*{initialVideosAbove}*/}
-        {/*<div className="site-container blog-post" ref={firstVideoRef}>*/}
-        <div className="site-container blog-post" >
+        <div className="site-container blog-post" ref={firstVideoRef}>
           <YoutubeHolder data={data.contentfulBlogs}/>
           {/*{numberOfVideosBelow === 0 ? UnderLastVideo() : null}*/}
         </div>
