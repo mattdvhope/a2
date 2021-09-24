@@ -1,3 +1,9 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const { spaceId, accessToken } = process.env;
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -13,6 +19,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId,
+        accessToken
+      }
+    },
+    {
+      resolve: `@hutsoninc/gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '222946198915072',
       },
     },
     `gatsby-transformer-sharp`,
