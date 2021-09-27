@@ -1,0 +1,254 @@
+.contact {
+  align-items: flex-start;
+  display: flex;
+  height: 835px;
+  overflow: hidden;
+  width: 110%;
+  text-align: center;
+}
+
+.overlap-group {
+  height: 1030px;
+  margin-top: -130px;
+  position: relative;
+  width: 600px;
+}
+
+@media screen and (max-width: 545px) {
+  .overlap-group {
+    margin-left: -3%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .overlap-group {
+    margin-left: -17%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .overlap-group {
+    margin-left: -26%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .overlap-group {
+    margin-left: -36%;
+  }
+}
+
+.vector {
+  height: 855px;
+  left: 58px;
+  position: absolute;
+  top: 112px;
+  width: 445px;
+}
+
+.big-dark-rectangle {
+  height: 1005px;
+  left: 19px;
+  position: absolute;
+  top: 0;
+  width: 527px;
+}
+
+.green-rectangle {
+  height: 546px;
+  left: 19px;
+  position: absolute;
+  top: 476px;
+  width: 527px;
+}
+
+.rectangle-37 {
+  height: 122px;
+  left: 223px;
+  position: absolute;
+  top: 203px;
+  width: 113px;
+}
+
+.rectangle-48 {
+  height: 122px;
+  left: 202px;
+  position: absolute;
+  top: 846px;
+  width: 113px;
+}
+
+.rectangle-38 {
+  height: 122px;
+  left: 280px;
+  position: absolute;
+  top: 292px;
+  width: 113px;
+}
+
+.rectangle-47 {
+  height: 122px;
+  left: 259px;
+  position: absolute;
+  top: 905px;
+  width: 114px;
+}
+
+.rectangle-46 {
+  height: 122px;
+  left: 57px;
+  position: absolute;
+  top: 767px;
+  width: 114px;
+}
+
+.rectangle-42 {
+  height: 122px;
+  left: 441px;
+  position: absolute;
+  top: 461px;
+  width: 113px;
+}
+
+.rectangle-39 {
+  height: 122px;
+  left: 168px;
+  position: absolute;
+  top: 294px;
+  width: 113px;
+}
+
+.rectangle-49 {
+  height: 122px;
+  left: 147px;
+  position: absolute;
+  top: 908px;
+  width: 113px;
+}
+
+.rectangle-45 {
+  height: 122px;
+  left: 389px;
+  position: absolute;
+  top: 522px;
+  width: 104px;
+}
+
+.rectangle-44 {
+  height: 122px;
+  left: 0;
+  position: absolute;
+  top: 444px;
+  width: 114px;
+}
+
+.rectangle-40 {
+  height: 122px;
+  left: 225px;
+  position: absolute;
+  top: 354px;
+  width: 113px;
+}
+
+.rectangle-43 {
+  height: 122px;
+  left: 57px;
+  position: absolute;
+  top: 504px;
+  width: 114px;
+}
+
+.rectangle-41 {
+  height: 122px;
+  left: 389px;
+  position: absolute;
+  top: 642px;
+  width: 109px;
+}
+
+.rectangle-51 {
+  height: 122px;
+  left: 207px;
+  position: absolute;
+  top: 627px;
+  width: 108px;
+}
+
+.group-5 {
+  height: 1px;
+  left: 435px;
+  position: absolute;
+  top: 161px;
+  width: 1px;
+}
+
+.title {
+  left: 175px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 264px;
+  width: 201px;
+}
+
+.text-1 {
+  color: var(--caribbean-green);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  left: 142px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 323px;
+  width: 263px;
+}
+
+.messengerLogo {
+  height: 62px;
+  left: 247px;
+  position: absolute;
+  top: 560px;
+  width: 65px;
+}
+
+.chat {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  left: 220px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 630px;
+  width: 117px;
+}
+
+.facebook-circular-logo {
+  height: 64px;
+  left: 248px;
+  position: absolute;
+  top: 710px;
+  width: 65px;
+}
+
+.follow-us {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xl);
+  left: 219px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 780px;
+  width: 134px;
+}
+
+.about-text {
+  position: absolute;
+  width: 255px;
+  height: 62px;
+  top: 540px;
+  left: 147px;
+  font-family: var(--font-family-noto_sans);
+  color: var(--white);
+  font-size: var(--font-size-xl2);
+}
+

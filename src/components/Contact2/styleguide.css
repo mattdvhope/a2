@@ -1,0 +1,16 @@
+:root { 
+  --caribbean-green: #00c185;
+  --white: #ffffff;
+ 
+  --font-size-xl: 22px;
+  --font-size-xl2: 26px;
+ 
+  --font-family-noto_sans: "Noto Sans", Helvetica;
+}
+.notosans-bold-white-26px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xl2);
+  font-style: normal;
+  font-weight: 700;
+}
