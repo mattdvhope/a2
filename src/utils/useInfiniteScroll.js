@@ -7,10 +7,22 @@ const useInfiniteScroll = (elementsFromScrolling) => {
 
   // Add elements above & below when window Y-ends reached
   useEffect(() => {
+
+// window.onscroll = function (e) {
+//     console.log(window.scrollY); // Value of scroll Y in px
+// };
+
     const handleScroll = () => {
-      if (!ReachedBottomOfDoc()) return;
+      if (window.scrollY < 940) return;
       setIsFetching(true);
     };
+
+
+
+    // const handleScroll = () => {
+    //   if (!ReachedBottomOfDoc()) return;
+    //   setIsFetching(true);
+    // };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
