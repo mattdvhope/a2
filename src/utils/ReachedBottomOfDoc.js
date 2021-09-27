@@ -6,8 +6,8 @@ const ReachedBottomOfDoc = () => {
   const windowScreenHeight = Math.ceil(window.innerHeight);
   const heightOfDocument = Math.ceil(document.documentElement.offsetHeight);
 
-  return heightAboveWindowScreen + windowScreenHeight >= heightOfDocument;
-  // return InRangeOfDocHeight(heightAboveWindowScreen, windowScreenHeight, heightOfDocument);
+  // return heightAboveWindowScreen + windowScreenHeight >= heightOfDocument;
+  return InRangeOfDocHeight(heightAboveWindowScreen, windowScreenHeight, heightOfDocument);
 }
 
 export default ReachedBottomOfDoc;
