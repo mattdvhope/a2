@@ -5,8 +5,8 @@ import SEO from "../components/seo";
 import "./BlogPost.css";
 import SetInitialVideosAbove from "../components/SetInitialVideosAbove";
 import SetInitialVideosBelow from "../components/SetInitialVideosBelow";
-// import SetMoreVideosAbove from "../components/SetMoreVideosAbove";
-// import SetMoreVideosBelow from "../components/SetMoreVideosBelow";
+import SetMoreVideosAbove from "../components/SetMoreVideosAbove";
+import SetMoreVideosBelow from "../components/SetMoreVideosBelow";
 import UnderLastVideo from "../components/UnderLastVideo"
 import YoutubeHolder from "./YoutubeHolder"
 import SetFirstVideoPosition from "../utils/SetFirstVideoPosition";
