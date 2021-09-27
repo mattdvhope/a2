@@ -11,7 +11,7 @@ import UnderLastVideo from "../components/UnderLastVideo"
 import YoutubeHolder from "./YoutubeHolder"
 import SetFirstVideoPosition from "../utils/SetFirstVideoPosition";
 // import RetainPosOrJumpToTop from "../utils/RetainPosOrJumpToTop";
-// import useInfiniteScroll from "../utils/useInfiniteScroll"; // custom Hook
+import useInfiniteScroll from "../utils/useInfiniteScroll"; // custom Hook
 // import { ScrollToSmoothly } from "../utils/ScrollToSmoothly";
 // import { RemoveCookies } from "../utils/RemoveCookies";
 
@@ -30,10 +30,10 @@ const BlogPost = ({ data }) => {
   const [initialVideosAbove, setInitialVideosAbove, initVidAbvRef] = SetInitialVideosAbove(data);
   const [initialVideosBelow, setInitialVideosBelow, initVidBlwRef] = SetInitialVideosBelow(data);
 
-  // // 3a. Set infinite scrolling. Scrolling wkll create 'more' videos (from BlogPost.js) above & below
-  // const [isFetching, setIsFetching] = useInfiniteScroll(elementsFromScrolling);
-  // const [moreVideosAbove, setMoreVideosAbove] = SetMoreVideosAbove(data);
-  // const [moreVideosBelow, setMoreVideosBelow] = SetMoreVideosBelow(data);
+  // // 3a. Set infinite scrolling. Scrolling will create 'more' videos (from BlogPost.js) above & below
+  const [isFetching, setIsFetching] = useInfiniteScroll(elementsFromScrolling);
+  const [moreVideosAbove, setMoreVideosAbove] = SetMoreVideosAbove(data);
+  const [moreVideosBelow, setMoreVideosBelow] = SetMoreVideosBelow(data);
   
   // // 3b. Actually attach these new components to the DOM
   // const [moreVidsAbv, setMoreVidsAbv] = useState(null);
@@ -44,22 +44,22 @@ const BlogPost = ({ data }) => {
   // const numberOfMoreVidsBelow = moreVideosBelow ? moreVideosBelow.props.children.length : null
   // const numberOfVideosBelow = numberOfInitVidsBelow + numberOfMoreVidsBelow;
 
-  // function elementsFromScrolling() {
-  //   const myPromise = new Promise((resolve, reject) => {
-  //     resolve();
-  //   });
-  //   myPromise
-  //   .then(res => !moreVidsAbv ? setMoreVidsAbv(moreVideosAbove) : null)
-  //   .then(res => !moreVidsBlw ? setMoreVidsBlw(moreVideosBelow) : null)
-  //   .then(res => {
-  //     const numMoreVidsAbv = moreVidsAbv ? moreVidsAbv.props.children.length : null;
-  //     const numMoreVidsBlw = moreVidsBlw ? moreVidsBlw.props.children.length : null;
-  //     const totalMoreVids = numMoreVidsAbv + numMoreVidsBlw;
-  //     RetainPosOrJumpToTop(initVidBlwRef, numberOfVideosBelow, totalMoreVids);
-  //   })
-  //   .then(res => setIsFetching(false))
-  //   .catch(err => console.log("error: ", err));
-  // }
+  function elementsFromScrolling() {
+    const myPromise = new Promise((resolve, reject) => {
+      resolve();
+    });
+    myPromise
+    // .then(res => !moreVidsAbv ? setMoreVidsAbv(moreVideosAbove) : null)
+    // .then(res => !moreVidsBlw ? setMoreVidsBlw(moreVideosBelow) : null)
+    // .then(res => {
+    //   const numMoreVidsAbv = moreVidsAbv ? moreVidsAbv.props.children.length : null;
+    //   const numMoreVidsBlw = moreVidsBlw ? moreVidsBlw.props.children.length : null;
+    //   const totalMoreVids = numMoreVidsAbv + numMoreVidsBlw;
+    //   RetainPosOrJumpToTop(initVidBlwRef, numberOfVideosBelow, totalMoreVids);
+    // })
+    .then(res => setIsFetching(false))
+    .catch(err => console.log("error: ", err));
+  }
 
   return (
     <Layout header="feed">
