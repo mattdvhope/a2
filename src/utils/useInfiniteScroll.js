@@ -13,7 +13,7 @@ const useInfiniteScroll = (elementsFromScrolling) => {
 // };
 
     const handleScroll = () => {
-      if (window.scrollY < 940) return;
+      if (window.scrollY < 640) return;
       setIsFetching(true);
     };
 
