@@ -36,8 +36,8 @@ const BlogPost = ({ data }) => {
   const [moreVideosBelow, setMoreVideosBelow] = SetMoreVideosBelow(data);
   
   // // 3b. Actually attach these new components to the DOM
-  // const [moreVidsAbv, setMoreVidsAbv] = useState(null);
-  // const [moreVidsBlw, setMoreVidsBlw] = useState(null);
+  const [moreVidsAbv, setMoreVidsAbv] = useState(null);
+  const [moreVidsBlw, setMoreVidsBlw] = useState(null);
 
   // // 4. Obtain number of videos below to know when to jump to the top AND whether to add UnderLastVideo() elements.
   // const numberOfInitVidsBelow = initialVideosBelow ? initialVideosBelow.props.children.length : null
@@ -49,8 +49,8 @@ const BlogPost = ({ data }) => {
       resolve();
     });
     myPromise
-    // .then(res => !moreVidsAbv ? setMoreVidsAbv(moreVideosAbove) : null)
-    // .then(res => !moreVidsBlw ? setMoreVidsBlw(moreVideosBelow) : null)
+    .then(res => !moreVidsAbv ? setMoreVidsAbv(moreVideosAbove) : null)
+    .then(res => !moreVidsBlw ? setMoreVidsBlw(moreVideosBelow) : null)
     // .then(res => {
     //   const numMoreVidsAbv = moreVidsAbv ? moreVidsAbv.props.children.length : null;
     //   const numMoreVidsBlw = moreVidsBlw ? moreVidsBlw.props.children.length : null;
@@ -65,14 +65,14 @@ const BlogPost = ({ data }) => {
     <Layout header="feed">
       <SEO title="วีดีโอ" />
       <div className="container graphics">
-        {/*{moreVidsAbv}*/}
+        {moreVidsAbv}
         {initialVideosAbove}
         <div className="site-container blog-post" ref={firstVideoRef}>
           <YoutubeHolder data={data.contentfulBlogs}/>
           {/*{numberOfVideosBelow === 0 ? UnderLastVideo() : null}*/}
         </div>
         {initialVideosBelow}
-        {/*{moreVidsBlw}*/}
+        {moreVidsBlw}
       </div>
     </Layout>
   )
