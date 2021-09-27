@@ -68,7 +68,7 @@ const BlogPost = ({ data }) => {
         {initialVideosAbove}
         <div className="site-container blog-post" ref={firstVideoRef}>
           <YoutubeHolder data={data.contentfulBlogs}/>
-          {/*{numberOfVideosBelow === 0 ? UnderLastVideo() : null}*/}
+          {numberOfVideosBelow === 0 ? UnderLastVideo() : null}
         </div>
         {initialVideosBelow}
         {moreVidsBlw}
