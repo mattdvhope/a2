@@ -3,11 +3,11 @@ import { Link, StaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "./BlogPost.css";
-// import SetInitialVideosAbove from "../components/SetInitialVideosAbove";
-// import SetInitialVideosBelow from "../components/SetInitialVideosBelow";
+import SetInitialVideosAbove from "../components/SetInitialVideosAbove";
+import SetInitialVideosBelow from "../components/SetInitialVideosBelow";
 // import SetMoreVideosAbove from "../components/SetMoreVideosAbove";
 // import SetMoreVideosBelow from "../components/SetMoreVideosBelow";
-// import UnderLastVideo from "../components/UnderLastVideo"
+import UnderLastVideo from "../components/UnderLastVideo"
 import YoutubeHolder from "./YoutubeHolder"
 import SetFirstVideoPosition from "../utils/SetFirstVideoPosition";
 // import RetainPosOrJumpToTop from "../utils/RetainPosOrJumpToTop";
@@ -27,8 +27,8 @@ const BlogPost = ({ data }) => {
   SetFirstVideoPosition(firstVideoRef, data.contentfulBlogs.slug);
 
   // // 2. Set 'initial' videos above and below the first video
-  // const [initialVideosAbove, setInitialVideosAbove, initVidAbvRef] = SetInitialVideosAbove(data);
-  // const [initialVideosBelow, setInitialVideosBelow, initVidBlwRef] = SetInitialVideosBelow(data);
+  const [initialVideosAbove, setInitialVideosAbove, initVidAbvRef] = SetInitialVideosAbove(data);
+  const [initialVideosBelow, setInitialVideosBelow, initVidBlwRef] = SetInitialVideosBelow(data);
 
   // // 3a. Set infinite scrolling. Scrolling wkll create 'more' videos (from BlogPost.js) above & below
   // const [isFetching, setIsFetching] = useInfiniteScroll(elementsFromScrolling);
@@ -66,12 +66,12 @@ const BlogPost = ({ data }) => {
       <SEO title="วีดีโอ" />
       <div className="container graphics">
         {/*{moreVidsAbv}*/}
-        {/*{initialVideosAbove}*/}
+        {initialVideosAbove}
         <div className="site-container blog-post" ref={firstVideoRef}>
           <YoutubeHolder data={data.contentfulBlogs}/>
           {/*{numberOfVideosBelow === 0 ? UnderLastVideo() : null}*/}
         </div>
-        {/*{initialVideosBelow}*/}
+        {initialVideosBelow}
         {/*{moreVidsBlw}*/}
       </div>
     </Layout>
