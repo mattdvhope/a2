@@ -71,6 +71,7 @@ const BlogPost = ({ data }) => {
           {numberOfVideosBelow === 0 ? UnderLastVideo() : null}
         </div>
         {initialVideosBelow}
+        <h2 style={{ color: `white` }}>{isFetching.toString()}</h2>
         {moreVidsBlw}
       </div>
     </Layout>
