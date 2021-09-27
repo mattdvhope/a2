@@ -39,9 +39,9 @@ const BlogPost = ({ data }) => {
   const [moreVidsBlw, setMoreVidsBlw] = useState(null);
 
   // // 4. Obtain number of videos below to know when to jump to the top AND whether to add UnderLastVideo() elements.
-  // const numberOfInitVidsBelow = initialVideosBelow ? initialVideosBelow.props.children.length : null
-  // const numberOfMoreVidsBelow = moreVideosBelow ? moreVideosBelow.props.children.length : null
-  // const numberOfVideosBelow = numberOfInitVidsBelow + numberOfMoreVidsBelow;
+  const numberOfInitVidsBelow = initialVideosBelow ? initialVideosBelow.props.children.length : null
+  const numberOfMoreVidsBelow = moreVideosBelow ? moreVideosBelow.props.children.length : null
+  const numberOfVideosBelow = numberOfInitVidsBelow + numberOfMoreVidsBelow;
 
   function elementsFromScrolling() {
     const myPromise = new Promise((resolve, reject) => {
@@ -50,12 +50,12 @@ const BlogPost = ({ data }) => {
     myPromise
     .then(res => !moreVidsAbv ? setMoreVidsAbv(moreVideosAbove) : null)
     .then(res => !moreVidsBlw ? setMoreVidsBlw(moreVideosBelow) : null)
-    // .then(res => {
-    //   const numMoreVidsAbv = moreVidsAbv ? moreVidsAbv.props.children.length : null;
-    //   const numMoreVidsBlw = moreVidsBlw ? moreVidsBlw.props.children.length : null;
-    //   const totalMoreVids = numMoreVidsAbv + numMoreVidsBlw;
-    //   RetainPosOrJumpToTop(initVidBlwRef, numberOfVideosBelow, totalMoreVids);
-    // })
+    .then(res => {
+      const numMoreVidsAbv = moreVidsAbv ? moreVidsAbv.props.children.length : null;
+      const numMoreVidsBlw = moreVidsBlw ? moreVidsBlw.props.children.length : null;
+      const totalMoreVids = numMoreVidsAbv + numMoreVidsBlw;
+      RetainPosOrJumpToTop(initVidBlwRef, numberOfVideosBelow, totalMoreVids);
+    })
     .then(res => setIsFetching(false))
     .catch(err => console.log("error: ", err));
   }
