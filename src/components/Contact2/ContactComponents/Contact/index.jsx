@@ -84,11 +84,10 @@ function Contact(props) {
           <h1 className="title notosans-bold-white-26px">{title}</h1>
           <div className="text-1">{text1}</div>
 
-
           <a href="http://m.me/relationshipsthailand"><img className="messengerLogo" src={messengerLogo} /></a>
           <a href="http://m.me/relationshipsthailand"><div className="chat">{chat}</div></a>
-          <a href="fb://profile/?id=106619367753772"><img className="facebook-circular-logo" src={facebookCircularLogo} /></a>
-          <a href="fb://profile/?id=106619367753772"><div className="follow-us">{followUs}</div></a>
+          {/*<a href="fb://profile/?id=106619367753772"><img className="facebook-circular-logo" src={facebookCircularLogo} /></a>*/}
+          {/*<a href="fb://profile/?id=106619367753772"><div className="follow-us">{followUs}</div></a>*/}
 
         </div>
       </div>
